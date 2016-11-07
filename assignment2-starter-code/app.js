@@ -88,6 +88,45 @@ service.checkItem = function(index)
 
 service.toBuyList.getItems = function() {return service.toBuyList;}
 service.BoughtList.getItems = function() {
+  if(service.BoughtList.lenght != false)
+  {
+    return service.BoughtList;
+  }
+  else
+  {
+    throw new Error("Nothing bought yer");
+  }
+}
+
+}
+
+})();(function () {
+'use strict'
+
+var toBuyList = [{
+    name:"Apple",
+    quantity: "5"
+},
+{
+name: "Banana" ,
+quantity: "13"
+},
+{
+name: "Coconut",
+quantity: "4"
+},
+{
+name: "Donuts",
+quantity: "3"
+},
+{
+name: "Cookies",
+quantity: "6"
+}];
+
+<<<<<<< HEAD
+service.toBuyList.getItems = function() {return service.toBuyList;}
+service.BoughtList.getItems = function() {
   if(service.BoughtList.lenght)
   {
     return service.BoughtList;
@@ -97,7 +136,16 @@ service.BoughtList.getItems = function() {
     throw new Error("Nothing bought yet");
   }
 }
+=======
+angular.module('Assignment2', [])
+>>>>>>> parent of 2dae9b5... Terminado
 
+.controller('BuyShoppingListController', BuyShoppingListController);
+BuyShoppingListController.$inject = ['$scope'];
+function BuyShoppingListController ($scope) {
+  $scope.toBuyList = toBuyList;
 }
+
+
 
 })();
