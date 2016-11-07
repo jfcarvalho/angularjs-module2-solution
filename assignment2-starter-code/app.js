@@ -88,13 +88,13 @@ service.checkItem = function(index)
 
 service.toBuyList.getItems = function() {return service.toBuyList;}
 service.BoughtList.getItems = function() {
-  if(service.BoughtList.lenght != false)
+  if(service.BoughtList.lenght)
   {
     return service.BoughtList;
   }
   else
   {
-    throw new Error("Nothing bought yer");
+    throw new Error("Nothing bought yet");
   }
 }
 
